@@ -1,0 +1,99 @@
+<!---
+/**
+ * Zend Framework
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://framework.zend.com/license/new-bsd
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@zend.com so we can send you a copy immediately.
+ *
+ * @category   Zend
+ * @package    Zend_Gdata
+ * @subpackage Demos
+ * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @license    http://framework.zend.com/license/new-bsd     New BSD License
+ */
+-->
+
+
+ <!-- <link href="video_browser.css" type="text/css" rel="stylesheet"/> -->
+  <script src="video_browser.js" type="text/javascript"></script>
+<style>
+    div#main{
+        width: 600px;
+        height: 800px;
+        background: url(images/background.jpg);
+    }
+    
+    div#main header {
+        width: 100%;
+        height: 50px;
+       
+    }
+    
+    div#main header a{
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 10px 10px;
+        text-shadow: 0.1em 0.1em #333;
+        font-family: Georgia, san-serif;
+    }
+    
+    div#main header a:hover{
+        color: red;
+    }
+    
+    div#main header a.right{
+        float: right;
+    }
+    
+    div#main header a.left{
+        float: left;
+    }
+    
+    div#main header a.current{
+        color: red;
+    }
+    
+    div#main header a.current:hover{
+        color: #900;
+    }
+    
+     
+    div#top-header{
+        background: url(images/top-header.jpg) no-repeat;
+        height: 62px;
+    }
+</style>
+
+<div id="main">
+     <div id="top-header"></div>
+ <header>
+        <a href="index.php" class="left current">Klub254 |</a> 
+        <a href="upload.php" class="left">Upload</a>
+        <a href="" class="right">  | Top Tracks</a>
+        <a href="" class="right">Vote</a>
+    </header>
+  
+  <br clear="all" />
+  <div id="searchResults">
+    <div id="searchResultsListColumn">
+      <div id="searchResultsVideoList"></div>
+      <div id="searchResultsNavigation">
+        <form id="navigationForm">
+          <input type="button" id="previousPageButton" onclick="ytvbp.listVideos(ytvbp.previousQueryType, ytvbp.previousSearchTerm, ytvbp.previousPage);" value="Back" style="display: none;"></input>
+          <input type="button" id="nextPageButton" onclick="ytvbp.listVideos(ytvbp.previousQueryType, ytvbp.previousSearchTerm, ytvbp.nextPage);" value="Next" style="display: none;"></input>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
